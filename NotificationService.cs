@@ -13,3 +13,16 @@
         Console.WriteLine($"Success notification sent to {email}");
     }
 }
+
+
+
+
+//YX BELOW
+
+public class Notification
+{
+    public void SendPaymentSuccess(string recipient)
+    {
+        Console.WriteLine($"Payment confirmation sent to {recipient}.");
+    }
+}

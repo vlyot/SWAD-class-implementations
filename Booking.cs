@@ -31,3 +31,27 @@ public Booking(int bookingID, int renterID, int carID, DateTime pickupDate, Date
             return bookingController.GetCar(CarID);
         }
     }
+
+
+
+    //YX BELOW
+    public class Booking
+{
+    public int BookingId { get; set; }
+    public string CarType { get; set; }
+    public DateTime BookingDate { get; set; }
+    public decimal Cost { get; set; }
+
+    public Booking(int bookingId, string carType, DateTime bookingDate, decimal cost)
+    {
+        BookingId = bookingId;
+        CarType = carType;
+        BookingDate = bookingDate;
+        Cost = cost;
+    }
+
+    public override string ToString()
+    {
+        return $"Booking ID: {BookingId}, Car Type: {CarType}, Date: {BookingDate.ToShortDateString()}, Cost: ${Cost}";
+    }
+}
